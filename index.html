@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shalhevet script</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.6.1/core.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://pyscript.net/releases/2024.6.1/core.js"></script>
+</head>
+<body>
+<header>
+    <h1>
+        <img src="https://3.files.edl.io/d39d/21/05/06/214128-3225aba6-18f9-41fe-8d83-f26e25b96424.png" alt="Shalhevet Logo" class="logo">
+        Shalhevet scripts
+    </h1>
+</header>
+
+
+<article>
+    <h2>Import grades script fixer</h2>
+
+    <p id="error" class="error"></p>
+
+    Cross reference file: <input type="file" id="cross-ref-file">
+    <br /><br />
+    Import grades source file: <input type="file" id="import-grades-source">
+    <br /><br />
+    <button py-click="run">Submit</button>
+    <script type="py" src="./import_grades.py" config="./import_grades.py.json"></script>
+</article>
+
+</body>
+</html>
