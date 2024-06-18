@@ -52,12 +52,12 @@ async def run(event):
 
     for row in cross_ref_file:
         student_number = row["Student_Number"]
-        email = row["U_StudentInfo.ShalhevetEmail"]
+        email = row["U_StudentInfo.ShalhevetEmail"].lower()
         cross_ref_lookup[email] = student_number
 
     writer.writeheader()
     for row in import_grades_source:
-        email = row["Email"]
+        email = row["Email"].lower()
 
         psid = "ERROR"
         if email in cross_ref_lookup:
